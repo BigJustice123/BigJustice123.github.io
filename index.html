@@ -2,6 +2,9 @@
 <html>
 <head>
 
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
 
 
 
@@ -12,19 +15,27 @@
 	#Dax{
 		width: 250px;
 		height: 225px;
-		background-color: seagreen;
+/*		background-color: seagreen;*/
+		background-image:url(green.png);
+		background-size:cover;
+
+		transition: 3s;
+
+
 		}
 
 	#Dax:hover{
 			transform: rotate(360deg);
 			transition: 3s;
-			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY2TpgOd2O8g3uudiYjjgTGPiTYDnlg--vEw&s);
+			background-image: url(dax.png);
 			
 
 		}
 	
 
-#Flame{
+#flame{
+	transition: 3s;
+
 	width: 250px;
 	height: 225px;
 	background-color: skyblue;
@@ -45,13 +56,32 @@
 <br><br><br>
 
 
-<a href="journal.html">
+<a id="link" href="">
 	
 	<div id="Flame"></div>
 
 
 </a>
 
+<audio id="pop" src="pop.m4a"></audio>
+<div id="flame"></div>
+
+<script type="text/javascript">
+
+	function goToJournal (){
+		window.location="journal.html"
+
+	}
+	
+flame.addEventListener("click", function(){
+			pop.play()
+
+			setTimeout(goToJournal, 250)
+
+		})
+
+
+</script>
 
 
 
