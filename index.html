@@ -12,7 +12,7 @@
 	<title></title>
 
 <style type="text/css">
-	#Dax{
+	#dax{
 		width: 250px;
 		height: 225px;
 /*		background-color: seagreen;*/
@@ -20,25 +20,26 @@
 		background-size:cover;
 
 		transition: 3s;
+		margin-left: 50%;
 
 
 		}
 
-	#Dax:hover{
+	#dax:hover{
 			transform: rotate(360deg);
 			transition: 3s;
-			background-image: url(dax.png);
+			background-image: url(https://i1.sndcdn.com/artworks-6kvS6J4nsZ6Esu9n-RH0bdw-t500x500.jpg);
 			
 
 		}
 	
 
 #flame{
-	transition: 3s;
-
-	width: 250px;
-	height: 225px;
+	width: 500px;
+	height: 500px;
+	background-image: url(https://lunchly.com/cdn/shop/files/PDP_Front_Render_Turkey_Stack_Ems_EvergreenV1_600x.png?v=1726762458);
 	background-color: skyblue;
+	margin-left: 40%;
 }
 
 </style>
@@ -48,7 +49,7 @@
 <body>
 
 <a href="projects.html">
-	<div id="Dax"></div>
+	<div id="dax"></div>
 
 
 </a>
@@ -66,10 +67,13 @@
 <audio id="pop" src="pop.m4a"></audio>
 <div id="flame"></div>
 
+<audio id="mangophonk" src="mango.m4a"></audio>
+
 <script type="text/javascript">
 
 	function goToJournal (){
 		window.location="journal.html"
+
 
 	}
 	
@@ -77,6 +81,17 @@ flame.addEventListener("click", function(){
 			pop.play()
 
 			setTimeout(goToJournal, 250)
+
+		})
+
+dax.addEventListener("mouseenter", function(){
+			mangophonk.play()
+
+		})
+
+
+dax.addEventListener("mouseout", function(){
+			mangophonk.pause()
 
 		})
 
