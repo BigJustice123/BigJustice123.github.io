@@ -12,15 +12,21 @@
 	<title></title>
 
 <style type="text/css">
+
+body{
+	background-color: skyblue;
+	margin: 0px;
+}
+
 	#dax{
 		width: 250px;
-		height: 225px;
+		height: 250px;
 /*		background-color: seagreen;*/
-		background-image:url(green.png);
+		background-image:url(https://cdn-icons-png.flaticon.com/512/5899/5899686.png);
 		background-size:cover;
 
 		transition: 3s;
-		margin-left: 50%;
+		margin-left: 40%;
 
 
 		}
@@ -32,14 +38,25 @@
 			
 
 		}
+
+		#tree{
+			width: 600px;
+			height: 600px;
+			background-size: contain;
+			background-image:url(https://img.freepik.com/premium-vector/cute-christmas-tree-character-is-holding-candy-stick_129890-727.jpg);
+			margin-left: 25%;
+
+		}
 	
 
 #flame{
-	width: 500px;
-	height: 500px;
-	background-image: url(https://lunchly.com/cdn/shop/files/PDP_Front_Render_Turkey_Stack_Ems_EvergreenV1_600x.png?v=1726762458);
-	background-color: skyblue;
+	width: 250px;
+	height: 250px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(lunchly.png);
 	margin-left: 40%;
+
 }
 
 </style>
@@ -47,6 +64,9 @@
 
 </head>
 <body>
+<div id="tree"></div>
+
+
 
 <a href="projects.html">
 	<div id="dax"></div>
@@ -69,6 +89,9 @@
 
 <audio id="mangophonk" src="mango.m4a"></audio>
 
+<audio id="cheese" src="cheese.m4a"></audio>
+
+
 <script type="text/javascript">
 
 	function goToJournal (){
@@ -83,6 +106,17 @@ flame.addEventListener("click", function(){
 			setTimeout(goToJournal, 250)
 
 		})
+
+flame.addEventListener("mouseenter", function(){
+			cheese.play()
+
+		})
+
+flame.addEventListener("mouseout", function(){
+			cheese.pause()
+
+		})
+
 
 dax.addEventListener("mouseenter", function(){
 			mangophonk.play()
