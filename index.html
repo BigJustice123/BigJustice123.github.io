@@ -16,26 +16,31 @@
 body{
 	background-color: skyblue;
 	margin: 0px;
+	transition:2s;
 }
 
-	#dax{
+	#present{
 		width: 250px;
 		height: 250px;
 /*		background-color: seagreen;*/
 		background-image:url(https://cdn-icons-png.flaticon.com/512/5899/5899686.png);
 		background-size:cover;
+		position: relative;
+		top:80%;
+		left:40% ;
 
 		transition: 3s;
-		margin-left: 40%;
+/*		margin-left: 40%;*/
 
 
 		}
 
-	#dax:hover{
+	#present:hover{
 			transform: rotate(360deg);
 			transition: 3s;
 			background-image: url(https://i1.sndcdn.com/artworks-6kvS6J4nsZ6Esu9n-RH0bdw-t500x500.jpg);
 			
+
 
 		}
 
@@ -43,49 +48,59 @@ body{
 			width: 600px;
 			height: 600px;
 			background-size: contain;
-			background-image:url(https://img.freepik.com/premium-vector/cute-christmas-tree-character-is-holding-candy-stick_129890-727.jpg);
+			background-repeat: no-repeat;
+			background-image:url(tree.png);
 			margin-left: 25%;
 
 		}
 	
-
 #flame{
 	width: 250px;
 	height: 250px;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-image: url(lunchly.png);
-	margin-left: 40%;
+	background-image: url(bluepresent.png);
+	position: absolute;
+	z-index: 10;
+	top:72.34%;
+		left:20%;
 
 }
+
+	#flame:hover{
+			transform: rotate(-360deg);
+			transition: 3s;
+			background-image: url(lunchly.png);
+
+		}
+
 
 </style>
 
 
 </head>
 <body>
-<div id="tree"></div>
+<div id="tree">
+	<a href="projects.html"><div id="present"></div></a>
 
-
-
-<a href="projects.html">
-	<div id="dax"></div>
+<a id="link" href="journal.html"><div id="flame"></div>
 
 
 </a>
+
+
+</div>
+
+
+
+
 
 <br><br><br>
 
 
-<a id="link" href="">
-	
-	<div id="Flame"></div>
-
-
-</a>
 
 <audio id="pop" src="pop.m4a"></audio>
-<div id="flame"></div>
+<!-- <div id="flame"></div> -->
 
 <audio id="mangophonk" src="mango.m4a"></audio>
 
@@ -109,23 +124,29 @@ flame.addEventListener("click", function(){
 
 flame.addEventListener("mouseenter", function(){
 			cheese.play()
+			document.body.style.backgroundColor = "indianred"
 
 		})
 
 flame.addEventListener("mouseout", function(){
 			cheese.pause()
+			document.body.style.backgroundColor = "skyblue"
 
 		})
 
 
-dax.addEventListener("mouseenter", function(){
+present.addEventListener("mouseenter", function(){
 			mangophonk.play()
+			document.body.style.backgroundColor = "indianred"
+
 
 		})
 
 
-dax.addEventListener("mouseout", function(){
+present.addEventListener("mouseout", function(){
 			mangophonk.pause()
+			document.body.style.backgroundColor = "skyblue"
+
 
 		})
 

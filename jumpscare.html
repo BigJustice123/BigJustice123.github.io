@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<style type="text/css">
+		
+		#sheldon{
+			width: 500px;
+			height: 750px;
+			background-image: url(sheldon.png);
+			background-size:cover;
+			
+			background-repeat: no-repeat;
+			margin-left: 30%;
+			margin-bottom: 40%;
+
+
+
+		}
+	
+		#sheldon:hover{
+						background-size:cover;
+
+			width: 500px;
+			height: 750px;
+			background-repeat: no-repeat;
+			margin-left: 30%;
+			margin-bottom: 40%;
+			background-image: url(sheldon.gif);
+		}
+
+		
+
+
+
+	</style>
+
+
+
+</head>
+<body>
+
+	<div id="sheldon"></div>
+
+<audio id="softkitty" src="softkitty.m4a" controls></audio>
+
+
+	<script type="text/javascript">
+		sheldon.addEventListener("mouseenter", function(){
+			softkitty.play()
+
+		})
+
+
+		sheldon.addEventListener("mouseout", function(){
+			softkitty.pause()
+
+		})
+
+
+
+
+	</script>
+
+</body>
+</html>
