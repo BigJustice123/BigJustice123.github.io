@@ -51,6 +51,7 @@ body{
 			background-repeat: no-repeat;
 			background-image:url(tree.png);
 			margin-left: 25%;
+			transition: 2s;
 
 		}
 	
@@ -125,12 +126,15 @@ flame.addEventListener("click", function(){
 flame.addEventListener("mouseenter", function(){
 			cheese.play()
 			document.body.style.backgroundColor = "indianred"
+			tree.style.backgroundImage = "url(skull.png)"
+
 
 		})
 
 flame.addEventListener("mouseout", function(){
 			cheese.pause()
 			document.body.style.backgroundColor = "skyblue"
+			tree.style.backgroundImage = "url(tree.png)"
 
 		})
 
@@ -138,6 +142,7 @@ flame.addEventListener("mouseout", function(){
 present.addEventListener("mouseenter", function(){
 			mangophonk.play()
 			document.body.style.backgroundColor = "indianred"
+			tree.style.backgroundImage = "url(skull.png)"
 
 
 		})
@@ -146,6 +151,7 @@ present.addEventListener("mouseenter", function(){
 present.addEventListener("mouseout", function(){
 			mangophonk.pause()
 			document.body.style.backgroundColor = "skyblue"
+			tree.style.backgroundImage = "url(tree.png)"
 
 
 		})
