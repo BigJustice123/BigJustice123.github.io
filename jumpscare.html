@@ -9,12 +9,30 @@
 			height: 750px;
 			background-image: url(sheldon.png);
 			background-size:cover;
-			
+			position: relative;
+			z-index: 5;
 			background-repeat: no-repeat;
 			margin-left: 30%;
 			margin-bottom: 40%;
 
 
+
+		}
+
+		body{
+			margin: 0px;
+		}
+
+		#sleeping{
+			position: absolute;
+			top:0x;
+			z-index:0;
+			width: 1500px;
+			height: 1000px;
+		background-image: url(sheldonsleep.png);
+			background-color: black;
+			background-size: cover;
+			opacity: 0;
 
 		}
 	
@@ -40,6 +58,8 @@
 </head>
 <body>
 
+	<div id="sleeping"></div>
+
 	<div id="sheldon"></div>
 
 <audio id="softkitty" src="softkitty.m4a" controls></audio>
@@ -48,15 +68,35 @@
 	<script type="text/javascript">
 		sheldon.addEventListener("mouseenter", function(){
 			softkitty.play()
+			sheldon.style.opacity="1"
+			sleeping.style.opacity="0"
 
 		})
 
 
 		sheldon.addEventListener("mouseout", function(){
 			softkitty.pause()
+		
 
 		})
 
+		function sleepingAppear(){
+			sleeping.style.opacity="1"
+			sheldon.style.opacity="0"
+
+		}
+
+		setTimeout(sleepingAppear, 13300)
+
+
+
+		function sleepingDisappear(){
+			sleeping.style.opacity="0"
+			sheldon.style.opacity="1"
+
+		}
+			
+		setTimeout(sleepingDisappear, 10)
 
 
 
