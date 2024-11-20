@@ -82,7 +82,8 @@ body{
 			.stillwater{
 			width: 100px;
 			height: 100px;
-			background-image: url(stillwater.png);
+			background-image: url(vexbolts.png);
+			background-size: contain;
 			margin: 5px;
 			display: inline-block;
 			position: relative;
@@ -125,10 +126,37 @@ body{
 
 <script type="text/javascript">
 
+	let x;
+	var running;
+	let anything=0
+
 	function goToJournal (){
 		window.location="journal.html"
+	}
 
 
+	function makeWater(){
+			anything = anything+1
+			let water = document.createElement("div")
+			document.body.appendChild(water)
+			water.classList.add("stillwater")
+
+			if(anything==72){clearInterval(x)}
+
+		}
+
+	function disappear (){
+		var classes = document.getElementsByClassName("stillwater")
+
+		var list = Array.from(classes)
+
+		console.log(list)
+
+		list.forEach(function(element){
+			element.classList.remove("stillwater");
+			clearInterval(x)
+
+		})
 	}
 	
 flame.addEventListener("click", function(){
@@ -142,6 +170,7 @@ flame.addEventListener("mouseenter", function(){
 			cheese.play()
 			document.body.style.backgroundColor = "indianred"
 			tree.style.backgroundImage = "url(skull.png)"
+				 x = setInterval(makeWater, 50)
 
 
 		})
@@ -150,6 +179,8 @@ flame.addEventListener("mouseout", function(){
 			cheese.pause()
 			document.body.style.backgroundColor = "skyblue"
 			tree.style.backgroundImage = "url(tree.png)"
+						disappear()
+
 
 		})
 
@@ -158,36 +189,19 @@ present.addEventListener("mouseenter", function(){
 			mangophonk.play()
 			document.body.style.backgroundColor = "indianred"
 			tree.style.backgroundImage = "url(skull.png)"
+		x= setInterval(makeWater, 100)
 
 
-
-			let anything = 0;
-
-		function makeWater(){
-			anything = anything+1
-			let water = document.createElement("div")
-			document.body.appendChild(water)
-			water.classList.add("stillwater")
-
-			if(anything==72){
-				clearInterval(x)
-			}
-
-
-		}
-
-		var x = setInterval(makeWater, 50)
-
-
-		})
+})
 
 
 present.addEventListener("mouseout", function(){
 			mangophonk.pause()
 			document.body.style.backgroundColor = "skyblue"
 			tree.style.backgroundImage = "url(tree.png)"
-
-		})
+			disappear()
+		
+})
 
 
 

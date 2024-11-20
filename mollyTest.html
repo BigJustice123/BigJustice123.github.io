@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+		.stillwater{
+			width: 100px;
+			height: 100px;
+			background-image: url(vexbolts.png);
+			background-size: contain;
+			margin: 5px;
+			display: inline-block;
+			position: relative;
+			z-index: -10;
+			top:0px;
+		}
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+let anything=0;
+	function makeWater(){
+			anything = anything+1
+			let water = document.createElement("div")
+			document.body.appendChild(water)
+			water.classList.add("stillwater")
+
+			if(anything==72){
+				clearInterval(x)
+			}
+
+
+		}
+
+		makeWater()
+		makeWater()
+		makeWater()
+		makeWater()
+		makeWater()
+
+		setInterval(makeWater, 100)
+
+		var classes = document.getElementsByClassName("stillwater")
+
+		var list = Array.from(classes)
+
+		console.log(list)
+
+		list.forEach(function(element){
+			element.style.opacity="0";
+
+		})
+
+
+	</script>
+
+</body>
+</html>
