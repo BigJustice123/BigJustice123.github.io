@@ -14,9 +14,11 @@
 <style type="text/css">
 
 body{
-	background-color: skyblue;
+	background-image: url(snowing.gif);
 	margin: 0px;
 	transition:2s;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 	#present{
@@ -49,7 +51,7 @@ body{
 			width: 600px;
 			height: 600px;
 			background-size: contain;
-			background-repeat: no-repeat;
+		background-repeat: no-repeat;
 			background-image:url(tree.png);
 			margin-left: 25%;
 			transition: 2s;
@@ -112,7 +114,7 @@ body{
 
 
 
-<br><br><br>
+
 
 
 
@@ -125,6 +127,8 @@ body{
 
 
 <script type="text/javascript">
+
+
 
 	let x;
 	var running;
@@ -168,7 +172,7 @@ flame.addEventListener("click", function(){
 
 flame.addEventListener("mouseenter", function(){
 			cheese.play()
-			document.body.style.backgroundColor = "indianred"
+			document.body.style.backgroundImage = "red.png"
 			tree.style.backgroundImage = "url(skull.png)"
 				 x = setInterval(makeWater, 50)
 
@@ -177,7 +181,7 @@ flame.addEventListener("mouseenter", function(){
 
 flame.addEventListener("mouseout", function(){
 			cheese.pause()
-			document.body.style.backgroundColor = "skyblue"
+			document.body.style.backgroundImage = "snowing.png"
 			tree.style.backgroundImage = "url(tree.png)"
 						disappear()
 
@@ -187,9 +191,9 @@ flame.addEventListener("mouseout", function(){
 
 present.addEventListener("mouseenter", function(){
 			mangophonk.play()
-			document.body.style.backgroundColor = "indianred"
+			document.body.style.backgroundImage = "red.png"
 			tree.style.backgroundImage = "url(skull.png)"
-		x= setInterval(makeWater, 100)
+		x = setInterval(makeWater, 50)
 
 
 })
@@ -197,7 +201,7 @@ present.addEventListener("mouseenter", function(){
 
 present.addEventListener("mouseout", function(){
 			mangophonk.pause()
-			document.body.style.backgroundColor = "skyblue"
+			document.body.style.backgroundImage = "snowing.png"
 			tree.style.backgroundImage = "url(tree.png)"
 			disappear()
 		
