@@ -62,8 +62,10 @@
 
 	<div id="sheldon"></div>
 
-<audio id="softkitty" src="softkitty.m4a" controls></audio>
 
+
+<audio id="softkitty" src="softkitty.m4a" controls></audio>
+<audio id="scream" src="scream.m4a" controls></audio>
 
 	<script type="text/javascript">
 		sheldon.addEventListener("mouseenter", function(){
@@ -83,6 +85,8 @@
 		function sleepingAppear(){
 			sleeping.style.opacity="1"
 			sheldon.style.opacity="0"
+			scream.play()
+
 
 		}
 
