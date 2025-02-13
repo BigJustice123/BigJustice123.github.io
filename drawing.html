@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+
+	<style type="text/css">
+		body{
+			background-color: lightpink;
+	}
+
+
+
+
+		.boxes{
+			width: 10px;
+			height: 10px;
+			background-color: white;
+			display: inline-block;
+			margin: 0px;
+/*			grid-gap:0px;*/
+			font-size:0;
+			float:left;
+			z-index: 1;
+		}
+
+.confetti{
+			height: 25px;
+			width: 25px;
+			background-image: url(pinkheart.png);
+			background-size: cover;
+			background-position: center;
+			position: absolute;
+			margin: 5px;
+			border-radius: 50%;
+			
+		}
+
+		#mom{
+			width: 200px;
+			height: 200px;
+			top: 2%;
+			left: 100%;
+			background-image: url('mom2.png');
+			background-size: cover;
+			background-position: center;
+			z-index: 10;
+			opacity: 0;
+			text-align: center;
+		}
+		
+
+		#h2{
+			opacity: 0;
+			text-align: center;
+			color: white;
+		}
+
+
+	
+		
+		
+
+	</style>
+</head>
+<body>
+<h2 id="title">Draw a heart on the whiteboard and click!</h2>
+
+<h1 id="h2">Happy Valentine's Day!</h1>
+
+<div id="mom"></div>
+
+
+
+	<script type="text/javascript">
+		var colors = ["red", "orange", "green", "blue", "purple", "black", "magenta", "gray", "pink", "brown"]
+		let random = Math.floor(Math.random()*10)
+
+
+
+		function makeSquare(){
+			let square = document.createElement("div")
+			document.body.appendChild(square)
+			square.classList.add("boxes")
+
+
+
+		square.addEventListener("mousemove", function(){
+			square.style.backgroundColor="red"
+		})
+
+}
+
+
+	  for (let i=0; i<100000; i=i+1) {
+makeSquare(i)
+}
+
+document.addEventListener("click", function(){
+function makeConfetti (x){
+	let confetti = document.createElement("div")
+	document.body.appendChild(confetti)
+	confetti.classList.add("confetti")
+	confetti.style.left = Math.random()*0+"px"
+	confetti.style.top = Math.random()*1000+"px"
+	confetti.style.backgroundColor = colors[random]
+	mom.style.opacity = 1
+	h2.style.opacity = 1
+
+
+
+	function moveUp(){
+		confetti.style.left = parseInt(confetti.style.left)+Math.random()*200+"px"
+		confetti.style.top = parseInt(confetti.style.top)+Math.random()*-100+"px"
+	}
+	setInterval(moveUp,150)
+
+}
+
+for(let i=0; i<200; i=i+1){
+	makeConfetti(i)
+}
+
+
+	}); // end of event listener and funciton
+
+
+
+
+	</script>
+
+
+
+</body>
+</html>
