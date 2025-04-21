@@ -74,7 +74,6 @@
 
 	<script type="text/javascript">
 		var colors = ["red", "orange", "green", "blue", "purple", "black", "magenta", "gray", "pink", "brown"]
-		let random = Math.floor(Math.random()*10)
 
 
 
@@ -101,9 +100,13 @@ function makeConfetti (x){
 	let confetti = document.createElement("div")
 	document.body.appendChild(confetti)
 	confetti.classList.add("confetti")
+
 	confetti.style.left = Math.random()*0+"px"
 	confetti.style.top = Math.random()*1000+"px"
+			let random = Math.floor(Math.random()*10)
+
 	confetti.style.backgroundColor = colors[random]
+	
 	mom.style.opacity = 1
 	h2.style.opacity = 1
 

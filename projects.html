@@ -5,31 +5,58 @@
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <style type="text/css">
 	
 
 		body{
 	background-color: skyblue;
 	margin: 0px;
+	text-align: center;
 
 
 a{
 	text-decoration:none;
 	color:white;
 	font-size:50px;
-	font-family: Shadows Into Light;
+	font-family: PT Sans;
 	text-align: center;
 				display: inline-block;
 
-}
 
+}
+	#basicprojects{
+		width: 300px;
+		height: 300px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url(basics.png);
+
+	}
+
+	#animation{
+		width: 300px;
+		height: 300px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url(animationimage.png);
+
+	}
+
+	#jumpscare{
+		width: 300px;
+		height: 300px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url(jumpscare.png);
+
+	}
 .links{
 	width:300px;
 	height:100px;
 	display:inline-block;
 	text-align: center;
-/*	background-color:blue;*/
+
 }
 
 
@@ -40,17 +67,17 @@ a{
 </head>
 <body>
 
-<a href="basicprojects.html"><div class="links">BASICS</div></a>
+<a href="basicprojects.html"><div id="basicprojects" class="links"></div></a>
 
  <br><br><br> 
 
-<a href="animation.html"><div class="links">animation</div></a>
+<a href="animation.html"><div id="animation" class="links"></div></a>
 
 
 
 
 
-<a href="jumpscare.html"><div class="links">jumpscare</div></a>
+<a href="jumpscare.html"><div id="jumpscare" class="links"></div></a>
 
 <a href="clock.html"><div class="links">clock</div></a>
 

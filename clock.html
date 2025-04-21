@@ -4,6 +4,10 @@
 	
 	<style type="text/css">
 		
+		body{
+			background-color: skyblue;
+		}
+
 		.stillwater{
 			width: 100px;
 			height: 100px;
@@ -29,11 +33,17 @@
 
 		let anything = 0;
 
-		function makeWater(){
+		function makeWater(input){
 			anything = anything+1
 			let water = document.createElement("div")
 			document.body.appendChild(water)
 			water.classList.add("stillwater")
+			water.style.display="inline-block"
+			water.innerText = guests[input]
+			water.style.fontSize="20px"
+			water.classList.add("label")
+			water.style.textAlign="center"
+
 
 			if(anything==72){
 				clearInterval(x)
