@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      .square {
+        background-color: indianred;
+        height: 132.77px;
+        width: 132.77px;
+        margin: 30px;
+        display: inline-block;
+        background-size: contain;
+        background-position: center;
+        background-color: beige;
+        background-repeat: no-repeat;
+      }
+
+      #container {
+        position: relative;
+        top: 192px;
+      }
+      #startbutton {
+        top: 50px;
+        left: 20px;
+        background-color:yellow
+      }
+            #scoreboard {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <center>
+
+        <div id="scoreboard"></div>
+   <div id="startbutton">START</div>
+
+     
+      <div id="container">
+        <div div id="div1" class="square"></div>
+        <div div id="div2" class="square"></div>
+        <div div id="div3" class="square"></div>
+        <div div id="div4" class="square"></div>
+        <br />
+        <div div id="div5" class="square"></div>
+        <div div id="div6" class="square"></div>
+        <div div id="div7" class="square"></div>
+        <div div id="div8" class="square"></div>
+      </div>
+    </center>
+    <script type="text/javascript">
+      let clickcounter = 0;
+      let box;
+      let score = 0;
+      scoreboard.InnerText = score
+    
+  div1.addEventListener("click", function()){
+                if(div1.id==random){
+    alert("Yay")
+    score=score+1
+     scoreboard.InnerText = score
+    }
+    
+                        }
+      
+       
+      function wackymole(){
+        let random1 = Math.floor(Math.random() * 8) + 1;
+        box = document.getElementById("div" + random1);
+          
+      
+        
+        function nowackymole(){
+          box.style.backgroundImage = "url()";
+      }
+        
+        box.style.backgroundImage =
+            "url(https://amcoranger.com/wp-content/uploads/2019/06/COLOURBOX105173131-1-495x400.jpg)";
+        
+        setTimeout(nowackymole, 500)
+      }
+      
+            
+      
+       startbutton.addEventListener("click", function(){
+         setInterval(wackymole, 1500)
+       })
+      
+    </script>
+  </body>
+</html>

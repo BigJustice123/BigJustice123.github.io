@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      .square {
+        background-color: aliceblue;
+        height: 132.77px;
+        width: 132.77px;
+        margin: 30px;
+        display: inline-block;
+        background-size: contain;
+        background-position: center;
+
+        background-repeat: no-repeat;
+      }
+
+      #container {
+        position: relative;
+        top: 192px;
+      }
+
+      #startbutton {
+        top: 50px;
+        left: 20px;
+        background-color: yellow;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      #scoreboard {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div id="scoreboard">Score: 0</div>
+      <div id="startbutton">START</div>
+
+      <div id="container">
+        <div id="div1" class="square"></div>
+        <div id="div2" class="square"></div>
+        <div id="div3" class="square"></div>
+        <div id="div4" class="square"></div>
+        <br />
+        <div id="div5" class="square"></div>
+        <div id="div6" class="square"></div>
+        <div id="div7" class="square"></div>
+        <div id="div8" class="square"></div>
+      </div>
+    </center>
+
+    <script type="text/javascript">
+      let score = 0;
+      let activeBox = null;
+
+      const scoreboard = document.getElementById("scoreboard");
+      const startbutton = document.getElementById("startbutton");
+
+      function updateScore() {
+        scoreboard.innerText = "Score: " + score;
+      }
+
+      function wackymole() {
+        // Clear the old mole
+        if (activeBox) {
+          activeBox.style.backgroundImage = "";
+        }
+
+        const randomNum = Math.floor(Math.random() * 8) + 1;
+        activeBox = document.getElementById("div" + randomNum);
+        activeBox.style.backgroundImage =
+          "url(https://amcoranger.com/wp-content/uploads/2019/06/COLOURBOX105173131-1-495x400.jpg)";
+      }
+
+      function handleClick(clickedBox) {
+        if (clickedBox === activeBox) {
+          score++;
+          updateScore();
+          clickedBox.style.backgroundImage = "";
+          activeBox = null;
+        }
+      }
+
+      // Manually add event listeners to each square
+      document.getElementById("div1").addEventListener("click", function () {
+        handleClick(yay);
+      });
+      document.getElementById("div2").addEventListener("click", function () {
+        handleClick(yay);
+      });
+      document.getElementById("div3").addEventListener("click", function () {
+        handleClick();
+      });
+      document.getElementById("div4").addEventListener("click", function () {
+        handleClick(yay);
+      });
+      document.getElementById("div5").addEventListener("click", function () {
+        handleClick(yay);
+      });
+      document.getElementById("div6").addEventListener("click", function () {
+        handleClick(yay);
+      });
+      document.getElementById("div7").addEventListener("click", function () {
+        handleClick(yay);
+      });
+      document.getElementById("div8").addEventListener("click", function () {
+        handleClick(yay);
+      });
+
+      // Start the game
+      startbutton.addEventListener("click", function () {
+        setInterval(wackymole, 1500);
+      });
+    </script>
+  </body>
+</html>
